@@ -41,7 +41,7 @@ FILES_LIMIT = int(environ.get("FREE_FILES", "3")) #No. of File User Gets In Free
 
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://10xHuB:10xHuB@cluster0.6qfcwqo.mongodb.net/?appName=Cluster0")
 FILES_DATABASE_URL = environ.get('FILES_DATABASE_URL', "mongodb+srv://10xHuB:10xHuB@cluster0.6qfcwqo.mongodb.net/?appName=Cluster0") # For Files
-SECOND_FILES_DATABASE_URL = environ.get('SECOND_FILES_DATABASE_URL', "mongodb+srv://10xHuB01: 10xHuB01@cluster0.ozpt0od.mongodb.net/?appName=Cluster0") # 2nd DB For Files
+SECOND_FILES_DATABASE_URL = environ.get('SECOND_FILES_DATABASE_URL', Files) # 2nd DB For Files
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Cluster0')
 
