@@ -18,19 +18,19 @@ def is_valid_ip(ip):
 
 # Main Variables 
 
-API_ID = int(environ.get('API_ID', ''))
-API_HASH = environ.get('API_HASH', '')
+API_ID = int(environ.get('API_ID', '28690893'))
+API_HASH = environ.get('API_HASH', 'c214f988aa1ac0b998ace0b7cd0e215f')
 BOT_TOKEN = environ.get('BOT_TOKEN', '')
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
-USERNAME = environ.get('USERNAME', "https://telegram.me/Silicon_Official")
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
-MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://t.me/LuciferCinema')
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1454524346').split()]
+USERNAME = environ.get('USERNAME', "https://t.me/xp_prajwal")
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1003114781601'))
+MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://t.me/Tenx_MoviesRequestGroup')
 
 # Pics 
 
-QR_CODE = environ.get('QR_CODE', 'https://graph.org/file/ccb9db43e62a2e524928e.jpg')
-START_IMG = environ.get('START_IMG', 'https://i.ibb.co/LdT5fdJY/photo-2025-08-13-01-12-38-7537871916074270724.jpg')
-FSUB_PICS = (environ.get('FSUB_PICS', 'https://graph.org/file/7478ff3eac37f4329c3d8.jpg https://graph.org/file/56b5deb73f3b132e2bb73.jpg')).split() 
+QR_CODE = environ.get('QR_CODE', 'https://envs.sh/ra9.jpg')
+START_IMG = environ.get('START_IMG', 'https://envs.sh/4kh.jpg')
+FSUB_PICS = (environ.get('FSUB_PICS', 'https://envs.sh/4kh.jpg')).split() 
 
 # File Limit
 
@@ -39,20 +39,20 @@ FILES_LIMIT = int(environ.get("FREE_FILES", "3")) #No. of File User Gets In Free
 
 # Database Settings
 
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://@cluster0.mongodb.net/?retryWrites=true&w=majority")
-FILES_DATABASE_URL = environ.get('FILES_DATABASE_URL', "mongodb+srv://@cluster0.mongodb.net/?retryWrites=true&w=majority") # For Files
-SECOND_FILES_DATABASE_URL = environ.get('SECOND_FILES_DATABASE_URL', "") # 2nd DB For Files
-DATABASE_NAME = environ.get('DATABASE_NAME', "Silicon")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Silicon_Files')
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://10xHuB:10xHuB@cluster0.6qfcwqo.mongodb.net/?appName=Cluster0")
+FILES_DATABASE_URL = environ.get('FILES_DATABASE_URL', "mongodb+srv://10xHuB:10xHuB@cluster0.6qfcwqo.mongodb.net/?appName=Cluster0") # For Files
+SECOND_FILES_DATABASE_URL = environ.get('SECOND_FILES_DATABASE_URL', "mongodb+srv://10xHuB01: 10xHuB01@cluster0.ozpt0od.mongodb.net/?appName=Cluster0") # 2nd DB For Files
+DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Cluster0')
 
 # Verify/Shortlink Settings 
 
-IS_VERIFY = is_enabled('IS_VERIFY', True)
-LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', ''))
-LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', ''))
-TUTORIAL = environ.get("TUTORIAL", "https://t.me/Silicon_Bot_Update")
-TUTORIAL2 = environ.get("TUTORIAL2", "https://t.me/Silicon_Bot_Update")
-TUTORIAL3 = environ.get("TUTORIAL3", "https://t.me/Silicon_Bot_Update")
+IS_VERIFY = is_enabled('IS_VERIFY', False)
+LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-1003114781601'))
+LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1003114781601'))
+TUTORIAL = environ.get("TUTORIAL", "https://t.me/tenxbackupchannel")
+TUTORIAL2 = environ.get("TUTORIAL2", "https://t.me/tenxbackupchannel")
+TUTORIAL3 = environ.get("TUTORIAL3", "https://t.me/tenxbackupchannel")
 VERIFY_IMG = environ.get("VERIFY_IMG", "https://graph.org/file/1669ab9af68eaa62c3ca4.jpg")
 SHORTENER_API = environ.get("SHORTENER_API", "5bb6e402dd86fb8774690a5f4a65d2a2c0c04877")
 SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", 'shortslink.in')
@@ -65,22 +65,22 @@ THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "14400"))
 
 # Force Subscribe Settings 
 
-auth_req_channels = environ.get("AUTH_REQ_CHANNELS", "-100")# requst to join Channel for force sub (make sure bot is admin) only for bot ADMINS  
-auth_channels = environ.get("AUTH_CHANNELS", "-100")# Channels for force sub (make sure bot is admin)
+auth_req_channels = environ.get("AUTH_REQ_CHANNELS", "-1003107393827")# requst to join Channel for force sub (make sure bot is admin) only for bot ADMINS  
+auth_channels = environ.get("AUTH_CHANNELS", "-1003107393827")# Channels for force sub (make sure bot is admin)
 AUTH_REQ_CHANNELS = [int(ch) for ch in auth_req_channels.split() if ch and id_pattern.match(ch)] 
 AUTH_CHANNELS = [int(ch) for ch in auth_channels.split() if ch and id_pattern.match(ch)]
 
 # Channels
 
-SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', '-1001816697837'))
-request_channel = environ.get('REQUEST_CHANNEL', '-1002470027489')
+SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', '-1003107393827'))
+request_channel = environ.get('REQUEST_CHANNEL', '-1003107393827')
 REQUEST_CHANNEL = int(request_channel) if request_channel and id_pattern.search(request_channel) else None
 
 # Movie Update Notification Settings/ Auto Index Settings
 
-MOVIE_UPDATE_NOTIFICATION = bool(environ.get('MOVIE_UPDATE_NOTIFICATION', False))  # Notification On (True) / Off (False)
-MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', ''))  # Notification of sent to your channel
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()] # Auto Index Channel
+MOVIE_UPDATE_NOTIFICATION = bool(environ.get('MOVIE_UPDATE_NOTIFICATION', True))  # Notification On (True) / Off (False)
+MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', 'https://t.me/TenxHuB'))  # Notification of sent to your channel
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1003143993761 -1003132672301').split()] # Auto Index Channel
 DELETE_CHANNELS = int(environ.get('DELETE_CHANNELS','')) # Channel to delete file from DB
 IMAGE_FETCH = bool(environ.get('IMAGE_FETCH', True))  # On (True) / Off (False)
 LINK_PREVIEW = bool(environ.get('LINK_PREVIEW', False)) # Shows link preview in notification msg instead of image
