@@ -21,7 +21,7 @@ def is_valid_ip(ip):
 API_ID = int(environ.get('API_ID', '28690893'))
 API_HASH = environ.get('API_HASH', 'c214f988aa1ac0b998ace0b7cd0e215f')
 BOT_TOKEN = environ.get('BOT_TOKEN', '')
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1454524346').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1454524346 5977931010').split()]
 USERNAME = environ.get('USERNAME', "https://t.me/xp_prajwal")
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1003114781601'))
 MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://t.me/Tenx_MoviesRequestGroup')
